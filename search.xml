@@ -1,6 +1,553 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java速成-基础1</title>
+    <url>/2022/06/07/Java%E9%80%9F%E6%88%90-%E5%9F%BA%E7%A1%801/</url>
+    <content><![CDATA[<h1 id="Java速成【基础篇1】"><a href="#Java速成【基础篇1】" class="headerlink" title="Java速成【基础篇1】"></a>Java速成【基础篇1】</h1><blockquote>
+<p>有疑问：🤔️</p>
+</blockquote>
+<h2 id="java特点"><a href="#java特点" class="headerlink" title="java特点"></a>java特点</h2><ul>
+<li><p>简单性、面向对象、健壮性、结构中立、高性能、多线程、动态、安全性</p>
+</li>
+<li><p>跨平台</p>
+<ul>
+<li>通过Java语言编写的应用程序在不同的系统平台上都可以运行。</li>
+<li>只要在需要运行java应用程序的操作系统上，先安装一个Java虚拟机(JVM Java Virtual Machine)即可。由JVM来负责Java程序在该系统中的运行。</li>
+</ul>
+</li>
+</ul>
+<h2 id="JRE-amp-JDK"><a href="#JRE-amp-JDK" class="headerlink" title="JRE &amp; JDK"></a>JRE &amp; JDK</h2><ul>
+<li><p>JRE(Java Runtime Environment  Java运行环境)</p>
+<ul>
+<li>JVM+Java程序所需的核心类库+…</li>
+</ul>
+</li>
+<li><p>JDK(Java Development Kit  Java开发工具包)</p>
+<ul>
+<li>java的开发工具（编译工具javac.exe+打包工具jar.exe+…）+JRE</li>
+</ul>
+</li>
+</ul>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><blockquote>
+<ul>
+<li><p>写一个java程序，首先定义类。</p>
+</li>
+<li><p>程序要想能够被jvm调用，必须定义main方法。</p>
+</li>
+<li><p>程序要想有输出结果，必须用输出语句。</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String [] args)</span> &#123;</span><br><span class="line">        System.out.println(“Hello World”);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行与工作原理"><a href="#运行与工作原理" class="headerlink" title="运行与工作原理"></a>运行与工作原理</h3><p><img src="/image-20220605005333132-4363597.png"></p>
+<ul>
+<li><p>先编写java源代码程序，扩展名.java</p>
+</li>
+<li><p>在命令行模式中，输入javac命令对源代码进行编译，生成字节码文件</p>
+</li>
+<li><p>javac 源文件名.java</p>
+</li>
+<li><p>编译完成后，如果没有报错信息，输入java命令对class字节码文件进行解释运行,执行时不需要添加.class扩展名</p>
+</li>
+<li><p>java HelloWorld</p>
+</li>
+</ul>
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><img src="image-20220605005717613-4363602.png" alt="image-20220605005717613" style="zoom:50%;" />
+
+<img src="image-20220605005931495-4363606.png" alt="image-20220605005931495" style="zoom:43%;" />
+
+<ul>
+<li><p>组成关键字的字母全部小写</p>
+</li>
+<li><p>goto和const作为保留字存在,目前并不使用</p>
+</li>
+</ul>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><blockquote>
+<p>给类,接口,方法,变量等起名字时使用的字符序列</p>
+</blockquote>
+<ul>
+<li><p>组成规则</p>
+<ul>
+<li><p>英文大小写字母</p>
+</li>
+<li><p>数字字符</p>
+</li>
+<li><p>$和_</p>
+</li>
+</ul>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li><p>不能以数字开头</p>
+</li>
+<li><p>不能是Java中的关键字</p>
+</li>
+<li><p>区分大小写</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
+<li><p>单行注释</p>
+<ul>
+<li>格式： //注释文字</li>
+</ul>
+</li>
+<li><p>多行注释</p>
+<ul>
+<li>格式： /* 注释文字 */</li>
+</ul>
+</li>
+<li><p>文档注释</p>
+<ul>
+<li>格式：/** 注释文字 */</li>
+</ul>
+</li>
+</ul>
+<h3 id="常量、进制、进制转换及符号数"><a href="#常量、进制、进制转换及符号数" class="headerlink" title="常量、进制、进制转换及符号数"></a>常量、进制、进制转换及符号数</h3><h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><ul>
+<li><p>在程序执行的过程中其值不可以发生改变</p>
+</li>
+<li><p>Java中常量分类</p>
+<ul>
+<li><p>字面值常量</p>
+<ul>
+<li><p>字符串常量: 用双引号括起来的内容</p>
+</li>
+<li><p>整数常量: 所有整数<code>12</code>, <code>23</code></p>
+</li>
+<li><p>小数常量: 所有小数·<code>12.34</code>, <code>56.78</code></p>
+</li>
+<li><p>字符常量:用单引号括起来的内容·<code>&#39;a&#39;</code>，<code>&#39;A&#39;</code>，<code>&#39;0&#39;</code></p>
+</li>
+<li><p>布尔常量:<code>true</code>和<code>false</code></p>
+</li>
+<li><p>空常量: <code>null</code>(数组部分讲解)</p>
+</li>
+</ul>
+</li>
+<li><p>自定义常量(面向对象部分讲)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h4><ul>
+<li><p>二进制</p>
+<ul>
+<li>由0,1组成。以0b开头</li>
+</ul>
+</li>
+<li><p>八进制</p>
+<ul>
+<li>由0,1,…7组成。以0开头</li>
+</ul>
+</li>
+<li><p>十进制</p>
+<ul>
+<li>由0,1,…9组成。整数默认是十进制的</li>
+</ul>
+</li>
+<li><p>十六进制</p>
+<ul>
+<li>由0,1,…9,a,b,c,d,e,f(大小写均可)。以0x开头</li>
+</ul>
+</li>
+</ul>
+<h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><ul>
+<li><p>其他进制到十进制</p>
+</li>
+<li><p>十进制到其他进制</p>
+</li>
+</ul>
+<h4 id="符号数表示法-原码-反码-补码"><a href="#符号数表示法-原码-反码-补码" class="headerlink" title="符号数表示法-原码 反码 补码"></a>符号数表示法-原码 反码 补码</h4><blockquote>
+<p>所有数据的运算都是采用补码进行的。</p>
+</blockquote>
+<ul>
+<li><p>原码</p>
+<ul>
+<li>就是二进制定点表示法，即最高位为符号位，“0”表示正，“1”表示负，其余位表示数值的大小。</li>
+</ul>
+</li>
+<li><p>反码</p>
+<ul>
+<li>正数的反码与其原码相同；负数的反码是对其原码逐位取反，但符号位除外。</li>
+</ul>
+</li>
+<li><p>补码</p>
+<ul>
+<li>正数的补码与其原码相同；负数的补码是在其反码的末位加1。</li>
+</ul>
+</li>
+</ul>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><blockquote>
+<p>在程序执行的过程中，在某个范围内其值可以发生改变的量，如同数学中的未知数</p>
+</blockquote>
+<ul>
+<li>变量定义格式<ul>
+<li>数据类型 变量名 = 初始化值;</li>
+<li>数据类型 变量名;<br>变量名 = 初始化值;</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据类型和类型转换"><a href="#数据类型和类型转换" class="headerlink" title="数据类型和类型转换"></a>数据类型和类型转换</h3><blockquote>
+<p>Java是强类型语言，对于每一种数据都定义了明确的具体数据类型，在内存总分配了不同大小的内存空间</p>
+</blockquote>
+<img src="image-20220605012040713.png" alt="image-20220605012040713" style="zoom:50%;" />
+
+<img src="image-20220605012228653.png" alt="image-20220605012228653" style="zoom:40%;" />
+
+<ul>
+<li><p>注意事项</p>
+<ul>
+<li><p>作用域 </p>
+<ul>
+<li>变量定义在哪一级大括号中，哪个大括号的范围就是这个变量的作用域。相同的作用域中不能定义两个同名变量。</li>
+</ul>
+</li>
+<li><p>初始化值</p>
+<ul>
+<li>没有初始化值不能直接使用</li>
+</ul>
+</li>
+<li><p>在一行上建议只定义一个变量</p>
+<ul>
+<li>可以定义多个，但是不建议</li>
+</ul>
+</li>
+<li><p>boolean类型不能转换为其他的数据类型</p>
+</li>
+<li><p>隐式转换</p>
+<ul>
+<li>byte,short,char—int—long—float—double</li>
+<li>byte,short,char相互之间补转换，他们参与运算首先转换为int类型</li>
+</ul>
+</li>
+<li><p>强制转换</p>
+<ul>
+<li>目标类型 变量名=(目标类型)(被转换的数据);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="思考练习"><a href="#思考练习" class="headerlink" title="思考练习"></a>思考练习</h4><ol>
+<li><p>写出结果</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="string">&#x27;a&#x27;</span>);<span class="comment">//a</span></span><br><span class="line">System.out.println(<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>);<span class="comment">//a1</span></span><br><span class="line">System.out.println(<span class="string">&quot;hello&quot;</span>+<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>);<span class="comment">//helloa1</span></span><br><span class="line">System.out.println(<span class="string">&#x27;a&#x27;</span>+<span class="number">1</span>+<span class="string">&quot;hello&quot;</span>);<span class="comment">//a1hello</span></span><br><span class="line">System.out.println(<span class="string">&quot;5+5=&quot;</span>+<span class="number">5</span>+<span class="number">5</span>);<span class="comment">//5+5=55</span></span><br><span class="line">System.out.println(<span class="number">5</span>+<span class="number">5</span>+<span class="string">&quot;=5+5&quot;</span>);<span class="comment">//10=5+5</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
+<li><p>算术运算符</p>
+<ul>
+<li><p>+,-,*,/,%,++,–</p>
+</li>
+<li><p>参与操作使用：</p>
+<ul>
+<li>放在数据的前面，先数据变化，再参与运算。</li>
+<li>放在数据的后面，先参与运算，再数据变化。</li>
+</ul>
+</li>
+<li><p>%和/的区别</p>
+<ul>
+<li>%：余数<ul>
+<li>%的结果的符号和前面的那个数一致。</li>
+</ul>
+</li>
+<li>/：商<ul>
+<li>整数相除，结果是整数。想得到小数，可以乘以或者除以1.0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>赋值运算符</p>
+<ul>
+<li><p>= , +=, -=, *=, /=, %=</p>
+</li>
+<li><p>练习：short s=1, s = s+1; short s=1, s+=1;（有没有问题，如果有，哪里有问题）🤔️</p>
+</li>
+</ul>
+</li>
+<li><p>比较运算符</p>
+<img src="image-20220605015247578.png" alt="image-20220605015247578" style="zoom:50%;" /></li>
+<li><p>逻辑运算符</p>
+<ul>
+<li><p>&amp;:有false则false</p>
+</li>
+<li><p>|:有true则true</p>
+</li>
+<li><p>^:相同false，不同true(情侣关系)(交换两个变量的值的四种方式)</p>
+</li>
+<li><p>!:偶数个，值不变；奇数个，值相反。</p>
+</li>
+</ul>
+</li>
+</ul>
+  <img src="image-20220605015327600.png" alt="image-20220605015327600" style="zoom:40%;" />
+
+<ul>
+<li><p>“&amp;”和“&amp;&amp;”的区别：</p>
+<ul>
+<li><p>单&amp;时，左边无论真假，右边都进行运算；</p>
+</li>
+<li><p>双&amp;时，如果左边为真，右边参与运算，如果左边为假，那么右边不参与运算。</p>
+</li>
+</ul>
+</li>
+<li><p>“|”和“||”的区别同理，双或时，左边为真，右边不参与运算。</p>
+</li>
+<li><p>异或( ^ )与或( | )的不同之处是：当左右都为true时，结果为false。</p>
+</li>
+<li><p>位运算符</p>
+<ul>
+<li><p>位运算是直接对二进制进行运算。</p>
+</li>
+<li><p>^的特点：(掌握)</p>
+<ul>
+<li><p>针对同一个数据异或两次，值不变。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">a = a ^ b;</span><br><span class="line">b = a ^ b;</span><br><span class="line">a = a ^ b;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<img src="image-20220605015624141.png" alt="image-20220605015624141" style="zoom:50%;" />
+
+<img src="image-20220605015715292.png" alt="image-20220605015715292" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li><p>三目运算符</p>
+<ul>
+<li><p>(关系表达式)?表达式true1：表达式false2；</p>
+</li>
+<li><p>练习：获取两个数中大数。</p>
+<ul>
+<li>int x=3,y=4,z;   z = (x&gt;y)?x:y;  //z变量存储的就是两个数的大数。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="运算符的优先级（从高到低）"><a href="#运算符的优先级（从高到低）" class="headerlink" title="运算符的优先级（从高到低）"></a>运算符的优先级（从高到低）</h4><img src="image-20220605031039982.png" alt="image-20220605031039982" style="zoom:50%;" />
+
+
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><h4 id="键盘输入"><a href="#键盘输入" class="headerlink" title="键盘输入"></a>键盘输入</h4><ul>
+<li><p>导包(位置放到class定义的上面)</p>
+<ul>
+<li>import java.util.Scanner;</li>
+</ul>
+</li>
+<li><p>创建对象</p>
+<ul>
+<li>Scanner sc = new Scanner(System.in);</li>
+</ul>
+</li>
+<li><p>接收数据</p>
+<ul>
+<li>int x = sc.nextInt();</li>
+</ul>
+</li>
+</ul>
+<h4 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h4><ul>
+<li><p>顺序结构</p>
+</li>
+<li><p>选择结构</p>
+<ul>
+<li><p>if语句</p>
+<ul>
+<li><p>针对结果是boolean类型的判断;针对一个范围的判断;针对几个常量值的判断</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line"><span class="keyword">if</span>(关系表达式) &#123;</span><br><span class="line">  语句体</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"><span class="keyword">if</span>(关系表达式) &#123;</span><br><span class="line">  语句体<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">  语句体<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3</span></span><br><span class="line"><span class="keyword">if</span>(关系表达式<span class="number">1</span>) &#123;</span><br><span class="line">  语句体<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (关系表达式<span class="number">2</span>) &#123;</span><br><span class="line">  语句体<span class="number">2</span>;</span><br><span class="line">&#125;…</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">  语句体n+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>switch语句</p>
+<ul>
+<li><p>针对几个常量值的判断</p>
+</li>
+<li><p>case后面只能是常量，不能是变量</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式) &#123;</span><br><span class="line">    <span class="keyword">case</span> 值<span class="number">1</span>：</span><br><span class="line">        语句体<span class="number">1</span>;</span><br><span class="line">         <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 值<span class="number">2</span>：</span><br><span class="line">    语句体<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    …</span><br><span class="line">    <span class="keyword">default</span>：    </span><br><span class="line">        语句体n+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>循环结构</p>
+<ul>
+<li><p>组成</p>
+<ul>
+<li><p>初始化语句</p>
+</li>
+<li><p>判断条件语句</p>
+</li>
+<li><p>循环体语句：</p>
+</li>
+<li><p>控制条件语句：</p>
+</li>
+</ul>
+</li>
+<li><p>for语句</p>
+<ul>
+<li><p>只有在条件成立的时候才会去执行循环体</p>
+</li>
+<li><p>控制条件语句所控制的那个变量，在for循环结束后就不能再被访问到了,该变量就从内存中消失，提高内存的使用效率。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化语句;判断条件语句;控制条件语句) &#123;</span><br><span class="line">  循环体语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>while语句</p>
+<ul>
+<li><p>只有在条件成立的时候才会去执行循环体</p>
+</li>
+<li><p>控制条件语句所控制的那个变量，在for循环结束后还可以继续使用.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line"><span class="keyword">while</span>(判断条件语句) &#123;</span><br><span class="line">  循环体语句;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//2</span></span><br><span class="line">初始化语句;</span><br><span class="line"><span class="keyword">while</span>(判断条件语句) &#123;</span><br><span class="line">  循环体语句;</span><br><span class="line">  控制条件语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>do…while</p>
+<ul>
+<li><p>至少会执行一次循环体。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  循环体语句;</span><br><span class="line">&#125;<span class="keyword">while</span>((判断条件语句);</span><br><span class="line"><span class="comment">//2</span></span><br><span class="line">初始化语句;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  循环体语句;</span><br><span class="line">  控制条件语句;</span><br><span class="line">&#125; <span class="keyword">while</span>((判断条件语句); </span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>循环结构(循环嵌套使用)</p>
+</li>
+<li><p>跳转控制语句</p>
+<ul>
+<li><p>break</p>
+<ul>
+<li><p>跳出单层循环</p>
+</li>
+<li><p>跳出多层循环</p>
+<ul>
+<li><p>带标签的跳出</p>
+</li>
+<li><p>格式：标签名: 循环语句 //标签名要符合Java的命名规则</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>continue</p>
+<ul>
+<li>break 退出当前循环,continue 退出本次循环</li>
+</ul>
+</li>
+<li><p>return</p>
+<ul>
+<li>退出一个方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><blockquote>
+<p>方法就是完成特定功能的代码块</p>
+</blockquote>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">修饰符 返回值类型 方法名(参数类型 参数名<span class="number">1</span>，参数类型 参数名<span class="number">2</span>…) &#123;</span><br><span class="line">  函数体;</span><br><span class="line">  <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li><p>方法不调用不执行</p>
+</li>
+<li><p>方法与方法是平级关系，不能嵌套定义</p>
+</li>
+<li><p>方法定义的时候参数之间用逗号隔开</p>
+</li>
+<li><p>方法调用的时候不用在传递数据类型</p>
+</li>
+<li><p>如果方法有明确的返回值，一定要有return带回一个值</p>
+</li>
+</ul>
+<h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><ul>
+<li>在同一个类中，方法名相同，参数列表不同的方法。<ul>
+<li>参数列表不同：个数不同，数据类型不同</li>
+<li>与返回值类型无关。</li>
+</ul>
+</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><ul>
+<li><p>数组:存储同一种数据类型的多个元素的集合</p>
+<ul>
+<li>每个元素都有编号，从0开始。</li>
+<li>最大编号是数组的长度-1</li>
+</ul>
+</li>
+<li><p>数组的格式：</p>
+<ul>
+<li>数据类型[] 数组名;</li>
+<li>数据类型 数组名[];</li>
+</ul>
+</li>
+<li><p>数组的初始化(先初始化,然后才能使用)：</p>
+<ul>
+<li>动态初始化 只给长度，不给元素<pre><code>int[] arr = new int[3];
+</code></pre>
+</li>
+<li>静态初始化 不给长度，给元素<pre><code>int[] arr = new int[]&#123;1,2,3&#125;;
+      简化版：int[] arr = &#123;1,2,3&#125;;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>java中的内存分配</p>
+<ul>
+<li>栈 存储局部变量</li>
+<li>堆 new出来的</li>
+<li>方法区</li>
+<li>本地方法区</li>
+<li>寄存器</li>
+</ul>
+</li>
+<li><p>两个常见小问题</p>
+<ul>
+<li>数组越界<ul>
+<li>ArrayIndexOutOfBoundsException</li>
+<li>访问到了数组中的不存在的索引时发生。</li>
+</ul>
+</li>
+<li>空指针异常<ul>
+<li>NullPointerException</li>
+<li>数组引用没有指向实体，却在操作实体中的元素时。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数组常见操作    </p>
+<ul>
+<li>获取数组长度：数组名.length</li>
+<li>数组遍历</li>
+<li>获取最值</li>
+<li>数组反转</li>
+<li>查表法</li>
+<li>查找指定元素第一次出现的索引</li>
+</ul>
+</li>
+</ul>
+<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><blockquote>
+<p>元素是一维数组的数组。</p>
+</blockquote>
+<ul>
+<li>格式<ul>
+<li><code>数据类型[][] 变量名 = new 数据类型[m][n];</code></li>
+<li><code>数据类型[][] 变量名 = new 数据类型[m][];</code></li>
+<li><code>数据类型[][] 变量名 = new 数据类型[][]&#123;&#123;元素...&#125;,&#123;元素...&#125;,&#123;元素...&#125;&#125;;</code></li>
+<li><code>数据类型[][] 变量名 = &#123;&#123;元素...&#125;,&#123;元素...&#125;,&#123;元素...&#125;&#125;;</code></li>
+</ul>
+</li>
+<li>常见操作：<ul>
+<li>数组遍历</li>
+<li>求和案例</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>helloKivitor</title>
+    <url>/2022/06/04/helloKivitor-md/</url>
+    <content><![CDATA[<h1 id="Hello-Kivitor"><a href="#Hello-Kivitor" class="headerlink" title="Hello Kivitor"></a>Hello Kivitor</h1><p>今天是我的农历生日～</p>
+<p><img src="/helloKivitor-md/1.png" alt="1"></p>
+]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Day1</title>
     <url>/2022/06/06/Day1/</url>
     <content><![CDATA[<h1 id="Java速成【基础篇1】"><a href="#Java速成【基础篇1】" class="headerlink" title="Java速成【基础篇1】"></a>Java速成【基础篇1】</h1><blockquote>
@@ -1145,23 +1692,5 @@
       <tags>
         <tag>java</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>helloKivitor</title>
-    <url>/2022/06/04/helloKivitor-md/</url>
-    <content><![CDATA[<h1 id="Hello-Kivitor"><a href="#Hello-Kivitor" class="headerlink" title="Hello Kivitor"></a>Hello Kivitor</h1><p>今天是我的农历生日～</p>
-<p><img src="/helloKivitor-md/1.png" alt="1"></p>
-]]></content>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2022/06/06/test/</url>
-    <content><![CDATA[<p><img src="/2022/06/06/test/1.png" alt="1"></p>
-<p><img src="/2022/06/06/test/2.jpg" alt="2"></p>
-<img src="/2022/06/06/test/2.jpg" class="" title="This is an example image">
-]]></content>
   </entry>
 </search>
