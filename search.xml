@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test</title>
+    <url>/2022/06/06/test/</url>
+    <content><![CDATA[<p><img src="/test/1.png" alt="1"></p>
+<p><img src="/test/2.jpg" alt="2"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>helloKivitor</title>
     <url>/2022/06/04/helloKivitor-md/</url>
     <content><![CDATA[<h1 id="Hello-Kivitor"><a href="#Hello-Kivitor" class="headerlink" title="Hello Kivitor"></a>Hello Kivitor</h1><p>今天是我的农历生日～</p>
@@ -9,12 +16,6 @@
       <tags>
         <tag>生活</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2022/06/06/test/</url>
-    <content><![CDATA[<p><img src="/test/1.png" alt="1"></p>
-]]></content>
   </entry>
   <entry>
     <title>Java速成【基础篇1】</title>
@@ -58,18 +59,18 @@
 
 <h3 id="运行与工作原理"><a href="#运行与工作原理" class="headerlink" title="运行与工作原理"></a>运行与工作原理</h3><img src="image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
 
-<img src="/image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
+<img src="image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
 
-<img src="Java速成【基础篇1】/image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
+<img src="image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
 
-<img src="/Java速成【基础篇1】/image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
+<img src="image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
 
-<img src="_posts/Java速成【基础篇1】/image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
+<img src="image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
 
-<img src="/_posts/Java速成【基础篇1】/image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
+<img src="image-20220605005333132-4363597.png" alt="image-20220605005333132" style="zoom:50%;" />
 ![](image-20220605005333132-4363597.png)
 
-<p><img src="/Java%E9%80%9F%E6%88%90%E3%80%90%E5%9F%BA%E7%A1%80%E7%AF%871%E3%80%91/image-20220605005333132-4363597.png"></p>
+<p><img src="/2022/06/05/Java%E9%80%9F%E6%88%90%E3%80%90%E5%9F%BA%E7%A1%80%E7%AF%871%E3%80%91/image-20220605005333132-4363597.png"></p>
 <ul>
 <li><p>先编写java源代码程序，扩展名.java</p>
 </li>
